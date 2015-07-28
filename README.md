@@ -1,9 +1,3 @@
-# letlife-js-sdk
+# pre-pre-pre Alpha release
 
-LetLife API sdk for javascript
-
-## Services
-
-### System
-
-- ping
+>LetLife API sdk for javascript
