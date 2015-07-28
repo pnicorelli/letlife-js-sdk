@@ -2,10 +2,7 @@
 
 Check if the system is up.
 
-
-
-example
-```
+```js
 var lfSDK = require("letlife-js-sdk");
 
 lfSDK.config({
