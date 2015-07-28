@@ -15,24 +15,13 @@
 
 var lfSDK = require("./index");
 
-lfSDK.config({
-    basicAuthUser: "test-oauth-client",
-    basicAuthPassword: "test-oauth-client",
-})
-
-
-var system = lfSDK.System;
-
-system.ping(function(res){
-  console.log("ping says: "+res);
-});
-
 var account = lfSDK.Account;
+var user = lfSDK.User;
 
-account.emailExists("p.sw@gmail.com", function(res){
-  console.log("p.sw@gmail.com exists: "+res);
-});
 
-account.emailExists("p.nicorelli@gmail.com", function(res){
-  console.log("p.nicorelli@gmail.com exists: "+res);
-});
+  account.authToken("xxxx@xxxx.it", "password",  function(res){
+    lfSDK.config({ "bearerToken": res.access_token});
+    user.info( function(u){
+      console.log(u);
+    });
+  });

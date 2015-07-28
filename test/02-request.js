@@ -22,9 +22,9 @@ describe('LetLife SDK request', function() {
       basicAuthUser: 'esrever',
       basicAuthPassword: 'esrever'
     });
-    LetLife.request.basic('GET', '/test', null, function(code, body){
-        code.should.be.equal(200);
-        body.response.should.be.equal('tested');
+    LetLife.request.basic('GET', '/test', null, function(req, res){
+        res.code.should.be.equal(200);
+        res.body.response.should.be.equal('tested');
         return done();
     });
 
@@ -57,9 +57,9 @@ describe('LetLife SDK request', function() {
         apiUrl: "http://api.test",
         bearerToken: 'ZXNyZXZlcjplc3JldmVy'
       });
-      LetLife.request.bearer('GET', '/test', null, function(code, body){
-          code.should.be.equal(200);
-          body.response.should.be.equal('b tested');
+      LetLife.request.bearer('GET', '/test', null, function(req, res){
+          res.code.should.be.equal(200);
+          res.body.response.should.be.equal('b tested');
           return done();
       });
 
