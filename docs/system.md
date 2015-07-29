@@ -3,17 +3,16 @@
 Check if the system is up.
 
 ```js
-var lfSDK = require("letlife-js-sdk");
+var LF = require("letlife-js-sdk");
 
-lfSDK.config({
+LF.config({
     basicAuthUser: 'valid-user',
     basicAuthPAssword: 'valid-pass'
 })
 
-var req = new lfSDK.System();
+var req = new LF.System();
 
-req.ping( function(res){
+req.ping().then( function(res){
     console.log("Ping call says: "+res)
 });
-
 ```

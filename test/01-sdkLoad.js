@@ -5,7 +5,7 @@ var should = chai.should();
 
 describe('LetLife SDK loader', function() {
 
-    it('should instanciate the SDK', function(done){
+    it('should instantiate the SDK', function(done){
         var LetLife = require('../index');
         LetLife._option.apiUrl.should.be.equal(config.apiUrl);
         return done();

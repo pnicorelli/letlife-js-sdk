@@ -13,15 +13,21 @@
 //     console.log("Ping call says: "+res)
 // });
 
-var lfSDK = require("./index");
-
-var account = lfSDK.Account;
-var user = lfSDK.User;
-
-
-  account.authToken("xxxx@xxxx.it", "password",  function(res){
-    lfSDK.config({ "bearerToken": res.access_token});
-    user.info( function(u){
-      console.log(u);
-    });
-  });
+// var llSDK = require("./index");
+//
+// var account = llSDK.Account;
+//
+// account.emailExists("p.sw@gmail.com")
+//   .then( function(res){
+//     console.log("p.sw@gmail.com exists: "+res);
+//     return account.emailExists("p.nicorelli@gmail.com");
+//   }).then( function(res){
+//     console.log("p.nicorelli@gmail.com exists: "+res);
+//   });
+// account.authToken("p.nicorelli@gmaail.com", "password")
+//   .then(function( res ){
+//     console.log(res)
+//   }).catch( function(err){
+//     console.log( err instanceof llSDK.ApiError)
+//     console.log(err)
+//   });
