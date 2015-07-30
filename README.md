@@ -18,8 +18,8 @@ The letlife-js-sdk uses promises to allow for asynchronous workflows, and this a
 ```js
 var LF = require('letlife-js-sdk');
 LF.config({
-  basicAuthUser:"test-oauth-client",
-  basicAuthPassword:"test-oauth-client"
+  basicAuthUser:"valid-basicAuthUser",
+  basicAuthPassword:"valid-basicAuthPassword"
 });
 account = LF.Account;
 
