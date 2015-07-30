@@ -55,7 +55,7 @@ describe('LetLife SDK request', function() {
 
       LetLife.config({
         apiUrl: "http://api.test",
-        bearerToken: 'ZXNyZXZlcjplc3JldmVy'
+        accessToken: 'ZXNyZXZlcjplc3JldmVy'
       });
       LetLife.request.bearer('GET', '/test', null, function(req, res){
           res.code.should.be.equal(200);

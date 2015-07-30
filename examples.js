@@ -15,12 +15,11 @@
 
 var llSDK = require("./index");
 
-var account = llSDK.Account;
+var user = llSDK.User;
 
-account.authToken("p.nicorealli@gmaail.com", "password")
+user.info()
   .then(function( res ){
     console.log(res)
   }).catch( function(err){
-    console.log( err instanceof llSDK.ApiError)
     console.log( err.getMessage() );
   });

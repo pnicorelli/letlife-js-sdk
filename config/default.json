@@ -2,7 +2,7 @@
     "apiUrl": "https://api.let.life",
     "basicAuthUser": "",
     "basicAuthPassword": "",
-    "bearerToken": "",
+    "accessToken": "",
     "username": "",
     "password": ""
 }
