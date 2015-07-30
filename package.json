@@ -1,10 +1,10 @@
 {
   "name": "letlife-js-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=ci istanbul test _mocha"
+    "test": "istanbul test _mocha"
   },
   "author": "",
   "license": "MIT",
