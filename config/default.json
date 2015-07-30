@@ -2,13 +2,5 @@
   "apiUrl": "https://api.let.life",
   "basicAuthUser": "",
   "basicAuthPassword": "",
-  "accessToken": "",
-  "username": "",
-  "password": "",
-  "config": {
-    "blanket": {
-      "pattern": [ "" ],
-      "data-cover-never": [ "node_modules", "tests" ]
-    }
-  }
+  "accessToken": ""
 }

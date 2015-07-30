@@ -9,7 +9,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "config": "^1.14.0",
     "q": "^1.4.1",
     "request": "^2.60.0",
     "underscore": "^1.8.3"
@@ -19,5 +18,13 @@
     "istanbul": "^0.3.17",
     "mocha": "^2.2.5",
     "nock": "^2.9.1"
+  },
+  "bugs": {
+    "url": "https://github.com/pnicorelli/letlife-js-sdk/issues/new",
+    "email": "mongoose-orm@googlegroups.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:pnicorelli/letlife-js-sdk.git"
   }
 }

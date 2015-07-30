@@ -1,4 +1,4 @@
-var config = require('config');
+var config = require('../config/default.json');
 var chai = require('chai');
 var expect = chai.expect;
 var should = chai.should();
