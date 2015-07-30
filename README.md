@@ -2,6 +2,7 @@
 
 >LetLife API sdk for javascript
 
+[![Build Status](https://travis-ci.org/pnicorelli/letlife-js-sdk.svg)](https://travis-ci.org/pnicorelli/letlife-js-sdk)
 
 ### System
 
