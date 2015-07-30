@@ -14,7 +14,7 @@ describe('LetLife SDK - User Services', function() {
 
   it('.info() should throw an Error on missing accessToken', function(done){
 
-    var p = function(){ return user.info(); }
+    var p = function(){ return user.info().done(); }
     expect(p).to.throw(Error);
     return done();
 
@@ -29,11 +29,10 @@ describe('LetLife SDK - User Services', function() {
     user.info()
       .then()
       .catch(function( err ){
-        console.log(err)
         expect(err).to.be.an.instanceof(LF.ApiError);
         err.statusCode.should.equal(500)
         return done();
-      });
+      }).done();
 
   });
 
@@ -56,7 +55,7 @@ describe('LetLife SDK - User Services', function() {
       res.email.should.equal("jk.mcgill@usa.gov");
       res.phoneNumber.should.equal("555-555-555");
       return done();
-    });
+    }).done();
 
   });
 

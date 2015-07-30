@@ -19,7 +19,7 @@ describe('LetLife SDK - System Services', function() {
         expect(err).to.be.an.instanceof(LF.ApiError);
         err.statusCode.should.equal(500)
         return done();
-      });
+      }).done();
 
   });
 
@@ -31,7 +31,7 @@ describe('LetLife SDK - System Services', function() {
     system.ping().then( function(res){
       res.response.should.equal('tested');
       return done();
-    });
+    }).done();
 
   });
 

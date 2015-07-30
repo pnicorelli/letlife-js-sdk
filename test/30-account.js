@@ -19,7 +19,7 @@ describe('LetLife SDK - Account Services', function() {
         expect(err).to.be.an.instanceof(LF.ApiError);
         err.statusCode.should.equal(500)
         return done();
-      });
+      }).done();
 
   });
 
@@ -31,7 +31,7 @@ describe('LetLife SDK - Account Services', function() {
     account.emailExists('e.snowden@nsa.gov').then( function(res){
       res.should.equal(true);
       return done();
-    });
+    }).done();
 
   });
 
