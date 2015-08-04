@@ -6,20 +6,23 @@ var nock = require('nock');
 var LF = require('../index');
 var system = LF.System;
 
+
 describe('LetLife SDK - System Services', function() {
+  before( function(done){
+    LF.config(config);
+    return done();
+  });
 
   it('.ping() should throw an ApiError on failure', function(done){
     var scope = nock(config.apiUrl, {})
         .get('/ping')
         .reply(500, { response: 'tested'});
 
-    system.ping()
-      .then()
-      .catch(function( err ){
-        expect(err).to.be.an.instanceof(LF.ApiError);
-        err.statusCode.should.equal(500)
-        return done();
-      }).done();
+    system.ping(function(err, res){
+      expect(err).to.be.an.instanceof(LF.ApiError);
+      err.statusCode.should.equal(500)
+      return done();
+    });
 
   });
 
@@ -28,10 +31,11 @@ describe('LetLife SDK - System Services', function() {
         .get('/ping')
         .reply(200, { response: 'tested'});
 
-    system.ping().then( function(res){
+    system.ping( function(err, res){
+      expect(err).to.be.null;
       res.response.should.equal('tested');
       return done();
-    }).done();
+    });
 
   });
 

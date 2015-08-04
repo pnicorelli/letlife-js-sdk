@@ -5,33 +5,23 @@
 [![Build Status](https://travis-ci.org/pnicorelli/letlife-js-sdk.svg)](https://travis-ci.org/pnicorelli/letlife-js-sdk)
 
 
-## Install
+### Use in node project
 
 ```shell
 npm install --save letlife-js-sdk
 ```
 
-## Usage
+### Build for browser
 
-The letlife-js-sdk uses promises to allow for asynchronous workflows, and this asynchronicity allows HTTP requests to be sent concurrently. The promise specification used by the SDK is [kriskowal/q](http://documentup.com/kriskowal/q/#)
-
-```js
-var LF = require('letlife-js-sdk');
-LF.config({
-  basicAuthUser:"valid-basicAuthUser",
-  basicAuthPassword:"valid-basicAuthPassword"
-});
-account = LF.Account;
-
-account.emailExists("p.nicorelli@gmail.com")
-  .then( function( response ){
-    console.log(response);
-  }).catch( function( err ){
-    console.log(err)
-  });
-
+```shell
+git clone https://github.com/pnicorelli/letlife-js-sdk.git
+cd letlife-js-sdk
+npm install
+npm run-script build-js
 ```
+
+then in the **./dist/** dir you'll find the **.js** and the minified version **.min.js**
+
 ## APIs
 
-- [System](./docs/system.md) related functions
-- [Account](./docs/account.md) related functions
+Read the [APIdocs](./docs/apidocs.md)
