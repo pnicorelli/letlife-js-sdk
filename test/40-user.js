@@ -28,13 +28,11 @@ describe('LetLife SDK - User Services', function() {
       .reply(500, { });
 
     LF.config({accessToken: "InvalidAccessToken"});
-    user.info()
-      .then()
-      .catch(function( err ){
+    user.info( function( err,res ){
         expect(err).to.be.an.instanceof(LF.ApiError);
         err.statusCode.should.equal(500)
         return done();
-      }).done();
+      });
 
   });
 
@@ -53,11 +51,12 @@ describe('LetLife SDK - User Services', function() {
         }
       });
 
-    user.info().then( function(res){
+    user.info( function(err, res){
+      expect(err).to.be.null;
       res.email.should.equal("jk.mcgill@usa.gov");
       res.phoneNumber.should.equal("555-555-555");
       return done();
-    }).done();
+    });
 
   });
 

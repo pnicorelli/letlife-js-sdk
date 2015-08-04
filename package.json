@@ -1,6 +1,6 @@
 {
   "name": "letlife-js-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "q": "^1.4.1"
+
   },
   "devDependencies": {
     "browserify": "^11.0.1",

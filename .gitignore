@@ -5,3 +5,4 @@ coverage
 pakmanaged.js
 dist/*
 !dist/.gitignore
+example.js

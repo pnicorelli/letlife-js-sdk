@@ -11,20 +11,17 @@ describe('LetLife SDK - Account Services', function() {
     LF.config(config);
     return done();
   });
-  
+
   it('.emailExists() should throw an ApiError on failure', function(done){
     var scope = nock(config.apiUrl, {})
         .get('/v1/email_exists/e.snowden@nsa.gov')
         .reply(500, { });
 
-    account.emailExists('e.snowden@nsa.gov')
-      .then()
-      .catch(function( err ){
+    account.emailExists('e.snowden@nsa.gov', function( err, result){
         expect(err).to.be.an.instanceof(LF.ApiError);
         err.statusCode.should.equal(500)
         return done();
-      }).done();
-
+    });
   });
 
   it('.emailExists() should return a boolean on success', function(done){
@@ -32,10 +29,11 @@ describe('LetLife SDK - Account Services', function() {
         .get('/v1/email_exists/e.snowden@nsa.gov')
         .reply(200, { result: true});
 
-    account.emailExists('e.snowden@nsa.gov').then( function(res){
+    account.emailExists('e.snowden@nsa.gov', function(err, res){
+      expect(err).to.be.null;
       res.should.equal(true);
       return done();
-    }).done();
+    })
 
   });
 
