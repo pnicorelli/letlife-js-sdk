@@ -3,3 +3,5 @@ node_modules
 config/personal-*
 coverage
 pakmanaged.js
+dist/*
+!dist/.gitignore
