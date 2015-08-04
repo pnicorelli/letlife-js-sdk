@@ -6,7 +6,12 @@ var nock = require('nock');
 var LF = require('../index');
 var system = LF.System;
 
+
 describe('LetLife SDK - System Services', function() {
+  before( function(done){
+    LF.config(config);
+    return done();
+  });
 
   it('.ping() should throw an ApiError on failure', function(done){
     var scope = nock(config.apiUrl, {})

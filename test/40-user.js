@@ -8,8 +8,10 @@ var LF = require('../index');
 var user = LF.User;
 
 describe('LetLife SDK - User Services', function() {
-  before(function(){
-    LF.config({accessToken: ""});
+  before( function(done){
+    config.accessToken="";
+    LF.config(config);
+    return done();
   });
 
   it('.info() should throw an Error on missing accessToken', function(done){

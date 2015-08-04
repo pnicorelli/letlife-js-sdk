@@ -7,7 +7,11 @@ var LF = require('../index');
 var account = LF.Account;
 
 describe('LetLife SDK - Account Services', function() {
-
+  before( function(done){
+    LF.config(config);
+    return done();
+  });
+  
   it('.emailExists() should throw an ApiError on failure', function(done){
     var scope = nock(config.apiUrl, {})
         .get('/v1/email_exists/e.snowden@nsa.gov')
