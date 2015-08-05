@@ -20,6 +20,7 @@ describe('LetLife SDK - System Services', function() {
 
     system.ping(function(err, res){
       expect(err).to.be.an.instanceof(LF.ApiError);
+      expect( err.getMessage() ).to.be.a.string;
       err.statusCode.should.equal(500)
       return done();
     });

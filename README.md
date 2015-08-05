@@ -22,6 +22,8 @@ npm run-script build-js
 
 then in the **./dist/** dir you'll find the **.js** and the minified version **.min.js**
 
+Read the [example](docs/webExample.md) for quick understand HowTo use the lib.
+
 ## APIs
 
 Read the [APIdocs](./docs/apidocs.md)
