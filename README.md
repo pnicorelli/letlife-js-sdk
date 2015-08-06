@@ -1,6 +1,6 @@
-# pre-pre-pre Alpha release
+# LetLife JS SDK - 0.0.3
 
->LetLife API sdk for javascript
+> Software Development Kit for LetLife APIs
 
 [![Build Status](https://travis-ci.org/pnicorelli/letlife-js-sdk.svg)](https://travis-ci.org/pnicorelli/letlife-js-sdk)
 
@@ -11,7 +11,7 @@
 npm install --save letlife-js-sdk
 ```
 
-### Build for browser
+### Build browser lib
 
 ```shell
 git clone https://github.com/pnicorelli/letlife-js-sdk.git
@@ -27,3 +27,7 @@ Read the [example](docs/webExample.md) for quick understand HowTo use the lib.
 ## APIs
 
 Read the [APIdocs](./docs/apidocs.md)
+
+## Developers Contribs
+
+If you want to contribute, please read this [code guide](./docs/developers.md)
