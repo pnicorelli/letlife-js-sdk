@@ -70,4 +70,34 @@ describe('LetLife SDK - Account Services', function() {
 
     });
 
+  it('.signup() should return access_token on success', function(done){
+    var signupData = {
+      email: "test@email.com",
+      password: "goodpassword",
+      first: "name",
+      last: "surname",
+      gender: "M",
+      termsConditions: true,
+      nda: true,
+      privacy: true
+    };
+
+    var scope = nock(config.apiUrl, {})
+    .post('/v1/signup')
+    .reply(200,
+      {
+        "result":{
+          "registered":true,
+          "access_token":"tn7vdl98huler55pnblii841mrlamuu1vo5s8lqv"
+        }
+      });
+
+      account.signup(signupData, function(err, res){
+        expect(err).to.be.null;
+        res.should.equal("tn7vdl98huler55pnblii841mrlamuu1vo5s8lqv");
+        return done();
+      });
+
+    });
+
   })

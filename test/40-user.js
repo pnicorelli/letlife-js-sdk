@@ -9,6 +9,7 @@ var user = LF.User;
 
 describe('LetLife SDK - User Services', function() {
   before( function(done){
+    config.apiUrl="http://localhost";
     config.accessToken="";
     LF.config(config);
     return done();
