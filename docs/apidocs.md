@@ -13,3 +13,4 @@ var account = LetLife.Account;
 
 - [Email Existence](./account/emailExists.md)
 - [Access Token](./account/accessToken.md)
+- [Signup](./account/signup.md)
